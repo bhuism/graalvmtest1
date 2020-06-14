@@ -29,3 +29,7 @@ build/
 
 ### VS Code ###
 .vscode/
+/src/main/resources/META-INF/native-image/jni-config.json
+/src/main/resources/META-INF/native-image/resource-config.json
+/src/main/resources/META-INF/native-image/proxy-config.json
+/src/main/resources/META-INF/native-image/reflect-config.json
