@@ -142,17 +142,9 @@
                         <version>20.1.0</version>
                         <configuration>
                             <buildArgs>
-                                --verbose
                                 -Dspring.native.verbose=true
-                                -H:+TraceClassInitialization
                                 --enable-https
-                                --enable-url-protocols=http,https
-                                --enable-all-security-services
-                                -J-Xmx6G
                                 -H:Name=test1
-                                -H:EnableURLProtocols=http,https
-                                -H:+JNI
-                                -H:+TraceClassInitialization
                                 --initialize-at-build-time=org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter
                                 --initialize-at-build-time=org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter
                             </buildArgs>

@@ -62,3 +62,9 @@
     2020-06-14 22:55:31.308  INFO 7109 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
     ```
     point your browser to http://localhost:8080/
+    
+# Docs
+
+* https://repo.spring.io/milestone/org/springframework/experimental/spring-graalvm-native-docs/0.7.0/spring-graalvm-native-docs-0.7.0.zip!/reference/index.html
+* https://github.com/spring-projects-experimental/spring-fu
+* 
