@@ -1,4 +1,4 @@
-# README
+# RTFM
 
 1. Generate a docker image with the graalvm compiler
     ```
