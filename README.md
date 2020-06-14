@@ -18,6 +18,23 @@
     ./build
     ```
 1. Get coffee
+1. Inspect the executable
+    ```
+    ldd ./target/test1
+        linux-vdso.so.1 (0x00007ffcc7fdc000)
+        libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x00007f9d881da000)
+        libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f9d881b9000)
+        libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007f9d881b4000)
+        libz.so.1 => /lib/x86_64-linux-gnu/libz.so.1 (0x00007f9d87f96000)
+        librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x00007f9d87f8c000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f9d87dcb000)
+        libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f9d87c46000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f9d8837a000)
+        libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x00007f9d87c2c000)
+    ```
+   
+   nice!
+   
 1. Run the image
     ```
     ./target/test1
@@ -44,3 +61,4 @@
     2020-06-14 22:51:28.492  INFO 7109 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
     2020-06-14 22:55:31.308  INFO 7109 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
     ```
+    point your browser to http://localhost:8080/
