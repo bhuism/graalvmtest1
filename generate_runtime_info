@@ -1,9 +1,9 @@
 #!/bin/sh
 
-sudo rm -Rf target src/main/resources/META-INF/native-image/* && \
+sudo rm -Rf target src/main/resources/META-INF/native-image/*
 
 mkdir -p src/main/resources/META-INF/native-image
 
-mvn -DskipTests clean install && \
+mvn -DskipTests clean package
 
 docker run -p 8080:8080 -it --rm --volume $(pwd):/build --workdir /build --volume "$HOME"/.m2:/root/.m2 graalvm-ce:20.1.0-java11-mvn-native-image 'java -agentlib:native-image-agent=config-output-dir=src/main/resources/META-INF/native-image -Dorg.graalvm.nativeimage.imagecode=agent  -jar target/test1.jar'
