@@ -143,6 +143,8 @@
                         <configuration>
                             <buildArgs>
                                 -Dspring.native.verbose=true
+                                -Dspring.native.remove-spel-support=true
+                                -Dspring.native.remove-jmx-support=true
                                 --enable-https
                                 -H:Name=test1
                                 --initialize-at-build-time=org.springframework.http.converter.xml.MappingJackson2XmlHttpMessageConverter
