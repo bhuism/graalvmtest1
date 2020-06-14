@@ -1,0 +1,8 @@
+steps:
+  # Build and push image
+  - name: 'gcr.io/cloud-builders/mvn'
+    id: build
+    args: ['-B', 'install', 'spring-boot:build-info']
+    env:
+      - 'COMMIT_SHA=$COMMIT_SHA'
+      - 'SHORT_SHA=$SHORT_SHA'
