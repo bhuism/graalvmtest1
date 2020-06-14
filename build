@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo rm -Rf target
+
+docker run -it --rm --volume $(pwd):/build --workdir /build --volume "$HOME"/.m2:/root/.m2 graalvm-ce:20.1.0-java11-mvn-native-image 'mvn -Pnative -DskipTests clean package'

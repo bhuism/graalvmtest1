@@ -1,0 +1,12 @@
+#!/bin/sh
+
+GRAALVMVERSION=$(mvn -q \
+  -Dexec.executable=echo \
+  -Dexec.args='${graalvm.version}' \
+  --non-recursive \
+  exec:exec);
+
+echo GRAALVMVERSION is ${GRAALVMVERSION}
+
+docker build . --tag=graalvm-ce:${GRAALVMVERSION}-java11-mvn-native-image
+
