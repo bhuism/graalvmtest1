@@ -1,18 +1,15 @@
 package nl.appsource.graalvm.test1;
 
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.servlet.function.ServerRequest;
 import reactor.core.publisher.Mono;
 
 import static org.springframework.http.HttpHeaders.ACCEPT;
 
-@RestController
 public class TestController {
 
-    @GetMapping
-    public Mono<CatResponse> get() {
+    public Mono<CatResponse> getRandomQuote(ServerRequest request) {
 
         return WebClient
                 .builder()
@@ -24,6 +21,6 @@ public class TestController {
                 .retrieve()
                 .bodyToMono(CatResponse.class);
 
-    }
 
+    }
 }
