@@ -97,7 +97,7 @@
             <plugin>
                 <groupId>com.github.spotbugs</groupId>
                 <artifactId>spotbugs-maven-plugin</artifactId>
-                <version>4.0.0</version>
+                <version>4.0.4</version>
                 <configuration>
                     <excludeFilterFile>http://lostlemon.lemonpages.nl/maven-root/v2/findbugs-exclude.xml
                     </excludeFilterFile>
