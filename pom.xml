@@ -109,7 +109,7 @@
                     <dependency>
                         <groupId>com.github.spotbugs</groupId>
                         <artifactId>spotbugs</artifactId>
-                        <version>4.1.0</version>
+                        <version>4.1.1</version>
                     </dependency>
                 </dependencies>
             </plugin>
