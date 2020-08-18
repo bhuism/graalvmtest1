@@ -17,7 +17,7 @@
     <properties>
         <java.version>11</java.version>
         <start-class>nl.appsource.graalvm.test1.Test1Application</start-class>
-        <graalvm.version>20.1.0</graalvm.version>
+        <graalvm.version>20.2.0</graalvm.version>
         <spring-graalvm-native.version>0.7.1</spring-graalvm-native.version>
     </properties>
 
