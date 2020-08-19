@@ -1,4 +1,4 @@
-FROM oracle/graalvm-ce:20.1.0-java11
+FROM oracle/graalvm-ce:20.2.0-java11
  
 # For SDKMAN to work we need unzip & zip
 RUN yum install -y unzip zip
